@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="formbg-outer">
+      <div class="formbg">
+        <div class="formbg-inner padding-horizontal--48">
+          <span class="padding-bottom--15">Upload pathway and set settings</span>
+          <form action="" method="post" enctype="multipart/form-data" style="" id="stripe-login">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="">Continue</button>
+
+            </form>
+            <! -- ["activation", "inhibition", "expression", "repression", "indirect effect", "state change",
+                      "binding/association", "dissociation", "missing interaction", "phosphorylation",
+                      "dephosphorylation", "glycosylation", "ubiquitination", "methylation"] -->
+            <div class="padding-top--15">
+                <span class="padding-bottom--15">List of all relations: </span>
+                <span class="padding-bottom--15">activation,inhibition,expression,repression,indirect effect,state change,binding/association,dissociation,missing interaction,phosphorylation,dephosphorylation,glycosylation,ubiquitination,methylation</span>
+
+            </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}
+```

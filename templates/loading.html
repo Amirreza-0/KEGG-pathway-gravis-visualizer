@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Loading...</h1>
+
+    <pre id="console"></pre>
+    <script>
+        var socket = new WebSocket("ws://{{ request.host }}/ws");
+        socket.onmessage = function (event) {
+            var console = document.getElementById("console");
+            console.innerHTML = event.data + "\n" + console.innerHTML;
+        };
+    </script>
+{% endblock content %}
+```
