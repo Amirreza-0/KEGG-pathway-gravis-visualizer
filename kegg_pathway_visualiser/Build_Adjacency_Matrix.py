@@ -32,11 +32,13 @@ def build_adjacency_matrix(pathway_file_name, symbols_path):
 
 
     def extract_pathway_genes(pathway):
-        pathway_genes = []
-        for gene in pathway.genes:
-            li = gene.name.split(" ")
-            pathway_genes.extend(li)
-        return pathway_genes
+        pathway_entries = []
+        for entry_id in pathway.entries:
+            li = pathway.entries[entry_id].name.split(" ")
+            for item in li:
+                if item != "undefined":
+                    pathway_entries.extend(li)
+        return pathway_entries
 
     pathway_genes = extract_pathway_genes(pathway)
 

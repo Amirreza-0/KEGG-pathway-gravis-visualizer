@@ -110,9 +110,10 @@ def extract_symbols(pathway_file_name):
     final_dict = {}
 
     items = []
-    for gene in pathway.genes:
-        if gene.name not in prev_symbols.keys():
-            items.append(gene)
+    for entry_id in pathway.entries:
+        if pathway.entries[entry_id].name not in prev_symbols.keys():
+            if pathway.entries[entry_id].name != "undefined":
+                items.append(pathway.entries[entry_id])
 
     for relation in pathway.relations:
         if relation.entry1.name not in prev_symbols.keys():
