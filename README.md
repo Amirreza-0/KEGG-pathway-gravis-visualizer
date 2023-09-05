@@ -8,3 +8,7 @@
 5. run the django project using `python manage.py runserver`
 
 then you can start using the project by following the given link in the terminal by default it is `http://127.0.0.1:8000/
+
+### contact
+for any question or suggestion you can contact me via:
+- email: amirreza.alise@gmail.com
