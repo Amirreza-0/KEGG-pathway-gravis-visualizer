@@ -14,6 +14,15 @@ https://www.kegg.jp/pathway/hsa05200
 
 any other standard KGML files from KEGG website should work.
 
+### output examples
+
+#### gravis
+![alt text](https://github.com/shockwave742/KEGG-pathway-gravis-visualizer/blob/main/examples/gravis_example.gif)
+
+#### NetworkX
+![alt text](https://github.com/shockwave742/KEGG-pathway-gravis-visualizer/blob/main/examples/NetworkX_example.png)
+
+
 ### contact
 for any question or suggestion you can contact me via:
 - email: amirreza.alise@gmail.com
