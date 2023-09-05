@@ -24,6 +24,6 @@ any other standard KGML files from KEGG website should work.
 
 
 ### contact
-for any question or suggestion you can contact me via:
+for any question or suggestions contact me via:
 - email: amirreza.alise@gmail.com
 
