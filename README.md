@@ -14,6 +14,8 @@ https://www.kegg.jp/pathway/hsa05200
 
 any other standard KGML files from KEGG website should work.
 
+to generate exact same results shown below you can give these parameters targets_genes: TP53,MDM2 target relations: activation,inhibition,expression,repression,indirect effect,state change,binding/association,dissociation,missing interaction target_generations: 3 to the web application of the project followed by KGML file hsa05200.xml.
+
 ### output examples
 
 #### gravis
