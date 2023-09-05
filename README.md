@@ -9,6 +9,12 @@
 
 then you can start using the project by following the given link in the terminal by default it is `http://127.0.0.1:8000/
 
+The test data that has been used for generating results can be found on KEGG website by following this link:
+https://www.kegg.jp/pathway/hsa05200
+
+any other standard KGML files from KEGG website should work.
+
 ### contact
 for any question or suggestion you can contact me via:
 - email: amirreza.alise@gmail.com
+
