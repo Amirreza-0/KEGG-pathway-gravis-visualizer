@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 from Bio.KEGG.KGML.KGML_parser import read
 import json
 import numpy as np

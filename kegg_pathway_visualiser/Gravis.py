@@ -19,7 +19,7 @@ def generate_gravis_html(matrix_path, symbols_path, target_genes=None, target_re
 
 
     target_genes = target_genes[0]
-    print("target_genes: ", target_genes)
+    print("target_entries: ", target_genes)
 
     if target_genes is None:
         target_genes = []
@@ -66,11 +66,11 @@ def generate_gravis_html(matrix_path, symbols_path, target_genes=None, target_re
         else:
             return gene_ID
 
-    def count_relations(pathway, target_genes=None):
+    def count_relations(pathway, target_entries=None):
         relations = {}
         for relation in pathway.relations:
             relation_type = relation.subtypes[0][0]
-            if target_genes is None or relation.entry1.name in target_genes or relation.entry2.name in target_genes:
+            if target_entries is None or relation.entry1.name in target_entries or relation.entry2.name in target_entries:
                 if relation_type in relations:
                     relations[relation_type] += 1
                 else:
@@ -173,7 +173,7 @@ def generate_gravis_html(matrix_path, symbols_path, target_genes=None, target_re
         'style': 'dashed',
         'labels': {e: e for e in G.nodes}
     }
-    # node['shape'] = 'rectangle' if node in target_genes else 'circle'
+    # node['shape'] = 'rectangle' if node in target_entries else 'circle'
     for node in G.nodes:
         if node in target_genes:
             G.nodes[node]['shape'] = 'rectangle'

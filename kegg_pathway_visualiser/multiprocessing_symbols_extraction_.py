@@ -4,7 +4,6 @@ import numpy as np
 import requests
 import multiprocessing
 from joblib import Parallel, delayed
-
 import re
 from Bio.KEGG.KGML.KGML_parser import read
 
@@ -40,6 +39,7 @@ def extract_symbols(pathway_file_name):
         pattern = re.compile(r'<td class="td11 defd"><div class="cel">(.*)<')
         # find all the matches
         symbols = pattern.findall(doc)[0]
+        # choosing the symbol by index (since there could be multiple symbols in one link)
         symbol = symbols.split(", ")[indx]
         return symbol
 
